@@ -1,0 +1,12 @@
+{
+  "name": "praca",
+  "version": "1.0.0",
+  "description": "A landing page for a website called praca",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass sass/main.scss:css/style.css",
+    "watch-css": "sass --watch sass/main.scss:css/style.css"
+  },
+  "author": "favdev10",
+  "license": "ISC"
+}

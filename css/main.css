@@ -499,85 +499,58 @@ $breakpoint argument choices:
   gap: 8px;
 }
 .form-container .form-group .input-field label {
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #262626;
+  font-size: 14px;
+  color: #333;
 }
 .form-container .form-group .input-field input {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
-  color: #262626;
+  color: #333;
 }
 .form-container .form-group .input-field input:focus {
   outline: none;
-  border-color: #2d62ce;
+  border-color: #007bff;
   box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
 }
 .form-container .form-group .input-field input::placeholder {
-  color: rgba(102, 102, 102, 0.5019607843);
+  color: #aaa;
 }
-.form-container .message-label {
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.form-container .input-message {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.form-container .input-message textarea {
+.form-container .input-field textarea {
   width: 100%;
   min-height: 100px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
-  color: #262626;
+  color: #333;
 }
-.form-container .input-message textarea:focus {
+.form-container .input-field textarea:focus {
   outline: none;
-  border-color: #2d62ce;
+  border-color: #007bff;
   box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
 }
-.form-container .input-message textarea::placeholder {
-  color: rgba(102, 102, 102, 0.5019607843);
+.form-container .input-field textarea::placeholder {
+  color: #aaa;
 }
 .form-container .submit-button {
   align-self: flex-start;
-  padding: 15px 16px 15px 16px;
-  background: #2d62ce;
+  padding: 10px 20px;
+  background: #007bff;
   color: #fff;
   font-size: 16px;
   border: none;
-  gap: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
 }
 .form-container .submit-button:hover {
   background: #0056b3;
 }
 
-.down {
-  padding-top: 1rem;
-  padding-left: 5rem;
-  margin-bottom: 13rem;
-}
 @media (min-width: 112.5em) {
   .down {
-    margin-top: 2rem;
+    margin-top: 72rem;
   }
 }
 @media (max-width: 37.5em) {
@@ -587,8 +560,8 @@ $breakpoint argument choices:
 }
 
 .footer {
-  background-color: rgba(243, 244, 249, 0.6);
-  position: absolute;
+  background-color: #f9f9f9;
+  padding: 2rem;
   font-family: Arial, sans-serif;
 }
 .footer .footer-content {
@@ -617,16 +590,12 @@ $breakpoint argument choices:
 .footer .footer-content .contact-info .heading {
   font-size: 16px;
   color: #000000;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .footer .footer-content .contact-info .description {
-  font-family: Poppins;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 32px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  font-size: 1.2rem;
+  color: #232323;
+  line-height: 1.5;
 }
 .footer .footer-content .contact-info span {
   display: block;
@@ -643,9 +612,6 @@ $breakpoint argument choices:
   display: flex;
   gap: 70px;
   align-items: flex-start;
-  position: relative;
-  top: 3rem;
-  left: 18rem;
 }
 @media (max-width: 75em) {
   .footer .footer-content .contact-details {
@@ -660,13 +626,6 @@ $breakpoint argument choices:
   }
 }
 .footer .footer-content .contact-details .detail-item .detail-heading {
-  font-family: Inter;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26.63px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   font-size: 1rem;
   color: #000000;
   margin-bottom: 0.25rem;
@@ -683,11 +642,7 @@ $breakpoint argument choices:
 }
 .footer .footer-content .contact-details .detail-item .detail-value {
   font-size: 16px;
-  font-weight: 700;
-  color: #000000;
-}
-.footer .footer-content .contact-details .detail-item .detail-value a {
-  text-decoration: none;
+  font-weight: 400;
   color: #000000;
 }
 @media (max-width: 37.5em) {
@@ -699,4 +654,4 @@ $breakpoint argument choices:
   color: #333;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

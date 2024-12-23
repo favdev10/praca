@@ -97,13 +97,18 @@ $secondary-color: #000;
 $light-bg: #f6f8fb;
 $gray: #7f8c8d;
 
+.homeland {
+  min-height: 100vh;
+  background-image: url(../assets/img/LANDING\ PAGE.png);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background-color: #f0f3fb;
-  border-bottom: 1px solid #eaeaea;
+
+  border-bottom: 1px solid #33333308;
 }
 
 .logo {
@@ -115,14 +120,14 @@ $gray: #7f8c8d;
 }
 
 .contact-btn {
-  background-color: $button-color;
+  background-color: #2d62ce;
   color: $white;
   border: none;
   padding: 12px 20px;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -135,8 +140,6 @@ $gray: #7f8c8d;
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background-color: #f0f3fb;
-  min-height: 100vh;
 
   @include respond(tab-port) {
     flex-direction: column; // Stack items vertically
@@ -148,7 +151,6 @@ $gray: #7f8c8d;
 
 .content {
   max-width: 50%;
-  margin-bottom: 50px;
 
   @include respond(tab-port) {
     max-width: 100%; // Use full width for smaller screens
@@ -168,10 +170,13 @@ $gray: #7f8c8d;
 
   .cs {
     font-family: Poppins;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
     letter-spacing: 1px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 
     @include respond(phone) {
       font-size: 15px;
@@ -208,7 +213,7 @@ $gray: #7f8c8d;
 
   .sub-text {
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     text-align: left;
@@ -220,11 +225,13 @@ $gray: #7f8c8d;
 
   .email-form {
     display: flex;
-    margin-bottom: 20px;
-    border: 1px solid #232323;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
     padding: 1px;
     width: 450px;
-    border-radius: 200px;
+    height: 52px;
+    border-radius: 10px;
 
     @include respond(phone) {
       width: 100%;
@@ -240,10 +247,11 @@ $gray: #7f8c8d;
     }
 
     button {
-      background-color: $secondary-color;
+      background-color: #2d62ce;
       color: white;
-      width: 100px;
-      border-radius: 50px;
+      width: 130px;
+      height: 48px;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 14px;
       transition: background-color 0.3s;
@@ -261,16 +269,17 @@ $gray: #7f8c8d;
   .social-icons {
     padding: 5px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 
     a img {
-      width: 35px;
-      height: 34px;
+      width: 64px;
+      height: 64px;
       cursor: pointer;
 
       @include respond(phone) {
         width: 30px;
-        height: 30px; // Scale down icons on smaller screens
+        height: 30px;
+        gap: 15px;
       }
     }
     @include respond(tab-port) {
@@ -282,7 +291,6 @@ $gray: #7f8c8d;
 .image-section {
   position: relative;
   max-width: 40%;
-  margin-top: 50px;
 
   @include respond(tab-port) {
     max-width: 100%;
@@ -291,11 +299,11 @@ $gray: #7f8c8d;
   }
 
   .phone-image {
-    width: 100%;
+    max-width: 100%;
   }
 
   .mobile {
-    width: 100%;
+    max-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -322,6 +330,12 @@ $gray: #7f8c8d;
 }
 
 .service-section {
+  background-color: linear-gradient(
+    319.24deg,
+    #2d62ce -1.45%,
+    rgba(255, 255, 255, 0) 101.68%
+  );
+
   text-align: center;
   padding: 2rem;
 
@@ -348,10 +362,15 @@ $gray: #7f8c8d;
     // }
   }
   .description {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-    color: #232323;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 3rem;
+
     @include respond(phone) {
       font-size: 16px;
     }
@@ -361,7 +380,7 @@ $gray: #7f8c8d;
   }
   .waiting-list-link {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 20px;
     color: #007bff;
     text-decoration: none;
     margin-bottom: 2rem;
@@ -374,7 +393,7 @@ $gray: #7f8c8d;
     margin: 0 auto; // Centers the form horizontally
     width: 45rem; // Shrinks to fit the content (input + button)
     border: 1px solid #ccc; // Outer border wrapping both elements
-    border-radius: 50px;
+    border-radius: 10px;
 
     @include respond(phone) {
       width: 30rem;
@@ -393,9 +412,9 @@ $gray: #7f8c8d;
       padding: 1rem;
       font-size: 14px;
       color: #fff;
-      background-color: #000;
+      background-color: #2d62ce;
       border: none;
-      border-radius: 50px;
+      border-radius: 10px;
       width: 165px;
       height: 50px;
       cursor: pointer;
@@ -408,37 +427,254 @@ $gray: #7f8c8d;
   }
 }
 
-.large {
-  display: block;
-  position: relative;
-  margin-top: 21rem;
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  background-color: #f2f4f6;
 
-  @include respond(tab-port) {
-    margin-top: 30rem;
-    margin-bottom: 60rem;
+  &__content {
+    span {
+      display: block;
+    }
+
+    flex: 1;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #191a15;
+    }
   }
 
-  @include respond(phone) {
-    margin-top: 18rem;
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+
+    &__icon {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      margin-right: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px) scale(1.1); // Moves up slightly and enlarges
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); // Adds a shadow effect
+      }
+
+      img {
+        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: pixelated;
+        transform: scale(1);
+        height: 100%;
+      }
+    }
+
+    &__text {
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #191a15;
+        margin-bottom: 8px;
+
+        span {
+          display: block;
+        }
+      }
+
+      p {
+        color: #191a15;
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
   }
 
-  .lgb {
-    position: absolute; // Use `fixed` if needed
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  &__images {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 
-    .lgb-img {
-      width: 100%;
+    .features__images {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 100%; // Makes sure the image is responsive
+        height: auto;
+        border-radius: 20px; // Optional: for rounded corners
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); // Keeps the shadow for depth
+      }
+    }
+  }
+}
+
+.contact {
+  text-align: center;
+  background-color: linear-gradient(
+    319.24deg,
+    #2d62ce -1.45%,
+    rgba(255, 255, 255, 0) 101.68%
+  );
+
+  max-width: 900px;
+  margin: 0 auto;
+  // text-align: center;
+  padding: 50px 20px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #232323;
+  }
+
+  p {
+    color: #232323;
+    margin-bottom: 3rem;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+$form-border-color: #ddd;
+$form-placeholder-color: #66666680;
+$form-label-color: #262626;
+$button-bg-color: #2d62ce;
+$button-text-color: #fff;
+$button-hover-bg: #0056b3;
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-group {
+    display: flex;
+    gap: 20px;
+
+    .input-field {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      label {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        color: $form-label-color;
+      }
+
+      input {
+        padding: 20px;
+        border: 1px solid $form-border-color;
+        border-radius: 4px;
+        font-size: 14px;
+        color: $form-label-color;
+
+        &:focus {
+          outline: none;
+          border-color: $button-bg-color;
+          box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+        }
+
+        &::placeholder {
+          color: $form-placeholder-color;
+        }
+      }
+    }
+  }
+
+  .message-label {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .input-message {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input-message textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid $form-border-color;
+    border-radius: 4px;
+    font-size: 14px;
+    color: $form-label-color;
+
+    &:focus {
+      outline: none;
+      border-color: $button-bg-color;
+      box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+    }
+
+    &::placeholder {
+      color: $form-placeholder-color;
+    }
+  }
+
+  .submit-button {
+    align-self: flex-start;
+    padding: 15px 16px 15px 16px;
+    background: $button-bg-color;
+    color: $button-text-color;
+    font-size: 16px;
+    border: none;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: $button-hover-bg;
     }
   }
 }
 
 .down {
-  margin-top: 45rem;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  margin-bottom: 13rem;
 
   @include respond(big-desktop) {
-    margin-top: 72rem;
+    margin-top: 2rem;
   }
 
   @include respond(phone) {
@@ -447,8 +683,8 @@ $gray: #7f8c8d;
 }
 
 .footer {
-  background-color: #f9f9f9;
-  padding: 2rem;
+  background-color: #f3f4f999;
+  position: absolute;
   font-family: Arial, sans-serif;
 
   .footer-content {
@@ -475,13 +711,17 @@ $gray: #7f8c8d;
       .heading {
         font-size: 16px;
         color: #000000;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
       }
 
       .description {
-        font-size: 1.2rem;
-        color: #232323;
-        line-height: 1.5;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
       }
 
       span {
@@ -503,6 +743,9 @@ $gray: #7f8c8d;
       display: flex;
       gap: 70px;
       align-items: flex-start;
+      position: relative;
+      top: 3rem;
+      left: 18rem;
 
       @include respond(tab-land) {
         gap: 30px; // Reduce spacing on tablet view
@@ -516,6 +759,14 @@ $gray: #7f8c8d;
 
       .detail-item {
         .detail-heading {
+          font-family: Inter;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 26.63px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+
           font-size: 1rem;
           color: #000000;
           margin-bottom: 0.25rem;
@@ -533,8 +784,12 @@ $gray: #7f8c8d;
 
         .detail-value {
           font-size: 16px;
-          font-weight: 400;
+          font-weight: 700;
           color: #000000;
+          a {
+            text-decoration: none;
+            color: #000000;
+          }
 
           @include respond(phone) {
             font-size: 0.875rem;
